@@ -14,7 +14,7 @@ export GO_BUILD_TAGS
 all: build
 
 build:
-	go build -o bin/ledis-server -tags '$(GO_BUILD_TAGS)' cmd/ledis-server/*
+	go build -o bin/ledis-server -tags 'rocksdb' cmd/ledis-server/*
 	go build -o bin/ledis-cli -tags '$(GO_BUILD_TAGS)' cmd/ledis-cli/*
 	go build -o bin/ledis-benchmark -tags '$(GO_BUILD_TAGS)' cmd/ledis-benchmark/*
 	go build -o bin/ledis-dump -tags '$(GO_BUILD_TAGS)' cmd/ledis-dump/*
